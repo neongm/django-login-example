@@ -3,15 +3,18 @@
 {% block content %}
 
 <br>
+<!--links to the login/register/logout pages-->
 <h2><a href="/login">login</a></h2>
 <h2><a href="/register">register</a></h2>
 <h2><a href="/logout">logout</a></h2>
 <br>
 
+<!--"login indicator"-->
 {% if request.user.is_authenticated %}
-<h1 class="m-3"> logged in as {{request.user.username}}</h1>
+<h1 class="text-dark"> logged in as {{request.user.username}}</h1>
 {% else %}
-<h1 class="m-3"> not logged in </h1>
+<h1 class="text-dark"> not logged in </h1>
 {% endif %}
+
 <br>
 {% endblock  %}
