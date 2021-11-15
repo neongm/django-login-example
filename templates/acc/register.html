@@ -19,7 +19,7 @@
                 <br>
                 <button type="submit" class="btn bg-light border w-100">register</button>
             </form>
-            {% for message in messages %}
+            {% for message in messages %} <!-- displaying the messages if there is any: -->
             <br>
             <div class="bg-warning border rounded p-1">
                 <h6 class=" text-dark text-center mt-1">{{message}}</h6>
@@ -28,6 +28,7 @@
 
         </div>
         <br>
+        <!-- login indicator -->
             {% if request.user.is_authenticated %}
             <div class="bg-primary border rounded p-1">
                 <h6 class=" text-white text-center mt-1">you are already logged in</h6>
