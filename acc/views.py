@@ -23,7 +23,7 @@ def login(req):
             auth.login(req, user)
             return redirect('index')
         else:
-            messages.info(req, 'u did something wrong')
+            messages.info(req, 'user not found or password is incorrect')
             return redirect('login')
     else:
         return render(req, 'acc/login.html', context)

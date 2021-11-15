@@ -11,10 +11,13 @@
 
 <!--"login indicator"-->
 {% if request.user.is_authenticated %}
-<h1 class="text-dark"> logged in as {{request.user.username}}</h1>
+ <div class="bg-primary border rounded p-1">
+    <h6 class=" text-white text-center mt-1">logged in as {{request.user.username}}</h6>
+</div>
 {% else %}
-<h1 class="text-dark"> not logged in </h1>
+<div class="bg-warning border rounded p-1">
+     <h6 class=" text-white text-center mt-1">not logged in</h6>
+</div>
 {% endif %}
 
-<br>
 {% endblock  %}

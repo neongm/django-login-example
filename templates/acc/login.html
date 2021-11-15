@@ -9,22 +9,27 @@
             <hr>
             <form method="POST">
                 {% csrf_token %}
-                <h5 class="lead m-2 text-dark text-center">username</h5>
+                <h5 class="lead text-dark text-center">username</h5>
                 <input name="username" class="form-control" type="text" placeholder="username">
-                <h5 class="lead m-2 text-dark text-center">password</h5>
+                <h5 class="lead text-dark text-center">password</h5>
                 <input name="password" class="form-control" type="password" placeholder="password">
                 <br>
                 <button type="submit" class="btn bg-light border w-100">login</button>
             </form>
             {% for message in messages %}
-                <p>{{message}}</p>
+            <br>
+            <div class="bg-warning border rounded p-1">
+                <h6 class=" text-dark text-center mt-1">{{message}}</h6>
+            </div>
             {% endfor %}
 
         </div>
             {% if request.user.is_authenticated %}
-                <h4 class="m-3 text-dark text-center"> you are already logged in</h4>
+            <div class="bg-primary border rounded p-1">
+                <h6 class=" text-white text-center mt-1">you are already logged in</h6>
+            </div>
             {% endif %}
-            <h5 class="lead m-2 text-dark text-center"><a href="/" class="m-2"> back to index </a></h5>
+            <h6 class="m-2 text-dark text-center"><a href="/" class="m-2"> back to index </a></h6>
     </div>
 </div>
 
